@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Xây dựng hệ mật Elgamal</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+    <script src="function.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="container">
+    <button type="button" class="btn btn-link mr-3">
+      <a href="./rsa.html"> RSA </a>
+    </button>
+    <button type="button" class="btn btn-link mr-3">
+      <a href="./elgamal.html"> Elgamal </a>
+    </button>
+    <h1>Xây dựng hệ mật Elgamal</h1>
+
+    <p><strong>Nhập các thông tin đầu vào:</strong></p>
+
+    <form class="row">
+      <div class="col-md-8 col-sm-10 col-xs-12">
+        <div class="form-group form-group-sm">
+          <label for="x">Nhập giá trị: x</label>
+          <input id="x" type="text" placeholder="x = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="p">Nhập giá trị: p</label>
+          <input id="p" type="text" placeholder="p = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="q">Nhập giá trị: q</label>
+          <input id="q" type="text" placeholder="q = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="e">Nhập giá trị: e</label>
+          <input id="e" type="text" placeholder="e = ?" class="form-control" />
+        </div>
+      </div>
+    </form>
+    <div id="content"></div>
+    <div class="mb-3">
+      <button type="button" onclick="rsa()" class="btn btn-info mr-3">
+        Thực hiện
+      </button>
+      <button type="button" class="btn btn-primary mr-3">
+        Chữ kí số Elgamal
+      </button>
+      <button type="button" onclick="clearHtml()" class="btn btn-danger mr-3">
+        Clear
+      </button>
+    </div>
+  </body>
+</html>
