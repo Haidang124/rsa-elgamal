@@ -30,26 +30,25 @@
     <form class="row">
       <div class="col-md-8 col-sm-10 col-xs-12">
         <div class="form-group form-group-sm">
-          <label for="x">Nhập giá trị: x</label>
+          <label for="x">Nhập văn bản cần mã hóa: x</label>
           <input id="x" type="text" placeholder="x = ?" class="form-control" />
         </div>
         <div class="form-group form-group-sm">
-          <label for="p">Nhập giá trị: p</label>
+          <label for="p">Nhập số nguyên tố: p</label>
           <input id="p" type="text" placeholder="p = ?" class="form-control" />
         </div>
         <div class="form-group form-group-sm">
-          <label for="q">Nhập giá trị: q</label>
-          <input id="q" type="text" placeholder="q = ?" class="form-control" />
+          <label for="a">Nhập khóa bí mật: a < p</label>
+          <input id="a" type="text" placeholder="a = ?" class="form-control" />
         </div>
         <div class="form-group form-group-sm">
-          <label for="e">Nhập giá trị: e</label>
-          <input id="e" type="text" placeholder="e = ?" class="form-control" />
+          <label for="k">Chọn giá trị ngẫu nhiên: k < p</label>
+          <input id="k" type="text" placeholder="k = ?" class="form-control" />
         </div>
       </div>
     </form>
-    <div id="content"></div>
     <div class="mb-3">
-      <button type="button" onclick="rsa()" class="btn btn-info mr-3">
+      <button type="button" onclick="elgamal()" class="btn btn-info mr-3">
         Thực hiện
       </button>
       <button type="button" class="btn btn-primary mr-3">
@@ -59,5 +58,6 @@
         Clear
       </button>
     </div>
+    <div id="content"></div>
   </body>
 </html>
