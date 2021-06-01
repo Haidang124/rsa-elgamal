@@ -23,6 +23,9 @@
     <button type="button" class="btn btn-link mr-3">
       <a href="./elgamal.html"> Elgamal </a>
     </button>
+    <button type="button" class="btn btn-link mr-3">
+      <a href="./elliptic.html"> Elliptic </a>
+    </button>
     <h1>Xây dựng hệ mật Elgamal</h1>
 
     <p><strong>Nhập các thông tin đầu vào:</strong></p>
@@ -45,19 +48,79 @@
           <label for="k">Chọn giá trị ngẫu nhiên: k < p</label>
           <input id="k" type="text" placeholder="k = ?" class="form-control" />
         </div>
+        <div class="form-group form-group-sm">
+          <label for="k">Random phân từ nguyên sinh alpha</label>
+          <input
+            id="alpha"
+            type="text"
+            placeholder="vd: alpha = 2"
+            class="form-control"
+          />
+        </div>
       </div>
     </form>
     <div class="mb-3">
       <button type="button" onclick="elgamal()" class="btn btn-info mr-3">
         Thực hiện
       </button>
-      <button type="button" class="btn btn-primary mr-3">
+      <button type="button" onclick="elgamalKy1()" class="btn btn-primary mr-3">
         Chữ kí số Elgamal
+      </button>
+      <button type="button" onclick="autoFill()" class="btn btn-success mr-3">
+        Ví dụ
       </button>
       <button type="button" onclick="clearHtml()" class="btn btn-danger mr-3">
         Clear
       </button>
     </div>
     <div id="content"></div>
+    <!-- <div class="elgamal-ky" style="display: none">
+      <h1>Sơ đồ chữ ký Elgamal</h1>
+
+      <form class="row">
+        <div class="col-md-8 col-sm-10 col-xs-12">
+          <div class="form-group form-group-sm">
+            <label for="p">Nhập khóa công khai người ký : p2</label>
+            <input
+              id="p2"
+              type="text"
+              placeholder="p2 = ?"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group form-group-sm">
+            <label for="a">Nhập khóa bí mật người ký: a2</label>
+            <input
+              id="a2"
+              type="text"
+              placeholder="a2 = ?"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group form-group-sm">
+            <label for="k">Nhập khóa bí mật ngẫu nhiên người ký: k2</label>
+            <input
+              id="k2"
+              type="text"
+              placeholder="k2 = ?"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group form-group-sm">
+            <label for="k">Random phân từ nguyên sinh alpha2</label>
+            <input
+              id="alpha2"
+              type="text"
+              placeholder="vd: alpha2 = 2"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </form>
+      <button type="button" onclick="elgamalKy()" class="btn btn-info mr-3">
+        Thực hiện ký
+      </button> -->
+    </div>
   </body>
 </html>

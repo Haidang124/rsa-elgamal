@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elliptic</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+  <script src="function.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="container">
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./rsa.html"> RSA </a>
+  </button>
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./elgamal.html"> Elgamal </a>
+  </button>
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./elliptic.html"> Elliptic </a>
+  </button>
+  <h1>Elliptic</h1>
+
+  <p><strong>Phương trình đường cong Elliptic: (E) y^2 =x^3 + ax + b mod r</strong></p>
+
+  <form class="row">
+    <div class="col-md-8 col-sm-10 col-xs-12">
+      <div class="form-group form-group-sm">
+        <label for="x">Nhập thông số đường cong</label>
+        <input id="a" type="text" placeholder="a = ?" class="form-control" />
+      </div>
+      <div class="form-group form-group-sm">
+        <input id="b" type="text" placeholder="b = ?" class="form-control" />
+      </div>
+      <div class="form-group form-group-sm">
+        <input id="r" type="text" placeholder="r = ?" class="form-control" />
+      </div>
+    </div>
+  </form>
+  <div class="mb-3">
+    <button type="button" onclick="getPoints()" class="btn btn-info mr-3">
+      Tìm các điểm thuộc (E)
+    </button>
+    <button type="button" onclick="birthPoint()" class="btn btn-info mr-3">
+      Tìm điểm Sinh
+    </button>
+    <button type="button" onclick="calculate()" class="btn btn-info mr-3">
+      Tính toán
+    </button>
+    <button type="button" onclick="clearHtml()" class="btn btn-danger mr-3">
+      Clear
+    </button>
+  </div>
+  <div class="calculate" style="display: none">
+    <h1>Tính toán</h1>
+    <form class="row">
+      <div class="col-md-8 col-sm-10 col-xs-12">
+        <div class="form-group form-group-sm">
+          <label for="p2">Nhập x,y của điểm P</label>
+          <input id="xp" type="text" placeholder="x = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <input id="yp" type="text" placeholder="y = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="p2">Nhập x,y của điểm Q</label>
+          <input id="xq" type="text" placeholder="x = ?" class="form-control" />
+        </div>
+       
+        <div class="form-group form-group-sm">
+          <input id="yq" type="text" placeholder="y = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="e2">Nhập n</label>
+          <input id="n" type="text" placeholder="n = ?" class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <label for="p2">Kết Quả</label>
+          <input id="xresult" type="text"  class="form-control" />
+        </div>
+        <div class="form-group form-group-sm">
+          <input id="yresult" type="text"  class="form-control" />
+        </div>
+      </div>
+    </form>
+    <button type="button" onclick="plus()" class="btn btn-info mr-3">
+      P + Q
+    </button>
+    <button type="button" onclick="multiplyPoint()" class="btn btn-info mr-3">
+      nP
+    </button>
+
+  </div>
+  <div id="content"></div>
+
+  </div>
+</body>
+
+</html>

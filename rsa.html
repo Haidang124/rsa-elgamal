@@ -23,6 +23,9 @@
     <button type="button" class="btn btn-link mr-3">
       <a href="./elgamal.html"> Elgamal </a>
     </button>
+    <button type="button" class="btn btn-link mr-3">
+      <a href="./elliptic.html"> Elliptic </a>
+    </button>
     <h1>Xây dựng hệ mật RSA</h1>
 
     <p><strong>Nhập các thông tin đầu vào:</strong></p>
@@ -47,13 +50,23 @@
         </div>
       </div>
     </form>
-    <div id="content"></div>
     <div class="mb-3">
       <button type="button" onclick="rsa()" class="btn btn-info mr-3">
         Thực hiện
       </button>
-      <button type="button" onclick="rsaKy()" class="btn btn-primary mr-3">
+      <button
+        type="button"
+        onclick="showKy('rsa-ky')"
+        class="btn btn-primary mr-3"
+      >
         Chữ kí số RSA
+      </button>
+      <button
+        type="button"
+        onclick="autoFillRSA()"
+        class="btn btn-success mr-3"
+      >
+        Ví dụ 256 bit
       </button>
       <button type="button" onclick="clearHtml()" class="btn btn-danger mr-3">
         Clear
@@ -65,40 +78,45 @@
       <form class="row">
         <div class="col-md-8 col-sm-10 col-xs-12">
           <div class="form-group form-group-sm">
-            <label for="p">Nhập giá trị: p1 để ký</label>
+            <label for="p2">Nhập giá trị: p2 để ký</label>
             <input
-              id="p"
+              id="p2"
               type="text"
-              placeholder="p = ?"
+              placeholder="p2 = ?"
               class="form-control"
             />
           </div>
           <div class="form-group form-group-sm">
-            <label for="q">Nhập giá trị: q1 để ký</label>
+            <label for="q2">Nhập giá trị: q2 để ký</label>
             <input
-              id="q"
+              id="q2"
               type="text"
-              placeholder="q = ?"
+              placeholder="q2 = ?"
               class="form-control"
             />
           </div>
           <div class="form-group form-group-sm">
-            <label for="e">Nhập giá trị: e1 để ký</label>
+            <label for="e2">Nhập giá trị: e2 để ký</label>
             <input
-              id="e"
+              id="e2"
               type="text"
-              placeholder="e = ?"
+              placeholder="e2 = ?"
               class="form-control"
             />
           </div>
         </div>
       </form>
-      <button type="button" onclick="rsa()" class="btn btn-info mr-3">
+      <button type="button" onclick="rsaKyFunction()" class="btn btn-info mr-3">
         Thực hiện ký
       </button>
-      <button type="button" onclick="clearHtml()" class="btn btn-danger mr-3">
-        Clear
+      <button
+        type="button"
+        onclick="autoFillRSAKy()"
+        class="btn btn-success mr-3"
+      >
+        Ví dụ
       </button>
     </div>
+    <div id="content"></div>
   </body>
 </html>
