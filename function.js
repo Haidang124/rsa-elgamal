@@ -81,7 +81,7 @@ function rsa() {
       "";
     // Bước 3
     div.innerHTML +=
-      '<h3 class="mt-4 bg-blue">Bước 3: Giả mã </h3>' +
+      '<h3 class="mt-4 bg-blue">Bước 3: Giải mã </h3>' +
       '<p class="mb-2"><b>x = y ^ d mod n = </b>' +
       y +
       " ^ " +
