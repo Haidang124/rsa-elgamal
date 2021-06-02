@@ -894,8 +894,8 @@ function multiplyPoint() {
   }
   let generate = P.generate();
   let result = generate[(n % generate.length) - 1];
-  document.getElementById("xresult").value = n !== 0 ? result.x : 0;
-  document.getElementById("yresult").value = n !== 0 ? result.y : 0;
+  document.getElementById("xresult").value = n !== 0 ? result.x : '0';
+  document.getElementById("yresult").value = n !== 0 ? result.y : '0';
 }
 function getPoints() {
   if (
