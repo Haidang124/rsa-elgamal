@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elliptic</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+  <script src="function.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="container">
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./index.html"> RSA </a>
+  </button>
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./elgamal.html"> Elgamal </a>
+  </button>
+  <button type="button" class="btn btn-link mr-3">
+    <a href="./elliptic.html"> Elliptic </a>
+  </button>
+    <button type="button" class="btn btn-link mr-3">
+    <a href="./tool.html"> Công cụ khác </a>
+  </button>
+  <h1>Công cụ khác</h1>
+
+
+<b for="a">Tính modulo theo a^b mod m</b>
+  <form class="row mt-3 mb-3">
+        
+
+    <div class="col-md-8 col-sm-10 col-xs-12 d-flex align-items-center">
+      <div class="mr-3">
+        <input id="a" type="text" placeholder="a = ?" class="form-control" />
+      </div>
+      <div class="mr-3">
+        <input id="b" type="text" placeholder="b = ?" class="form-control" />
+      </div>
+      <div class="mr-3">
+        <input id="m" type="text" placeholder="m = ?" class="form-control" />
+      </div>
+       <div class="mr-3">
+        <input id="result" type="text" placeholder="Kết quả =" class="form-control" />
+      </div>
+       <button type="button" onclick="tool('0')" class="btn btn-info mr-3">
+     Calculate
+    </button>
+    </div>
+  </form>
+ <b for="a">Tính a^-1 mod m</b>
+  <form class="row mt-3 mb-3">
+        
+
+    <div class="col-md-8 col-sm-10 col-xs-12 d-flex align-items-center">
+      <div class="mr-3">
+        <input id="a1" type="text" placeholder="a = ?" class="form-control" />
+      </div>
+      <div class="mr-3">
+        <input id="m1" type="text" placeholder="m = ?" class="form-control" />
+      </div>
+       <div class="mr-3">
+        <input id="result1" type="text" placeholder="Kết quả =" class="form-control" />
+      </div>
+       <button type="button" onclick="tool('1')" class="btn btn-info mr-3">
+     Calculate
+    </button>
+    </div>
+  </form>
+   
+  </div>
+ 
+</body>
+
+</html>

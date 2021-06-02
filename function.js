@@ -864,6 +864,18 @@ function plus() {
   document.getElementById("xresult").value = result.x;
   document.getElementById("yresult").value = result.y;
 }
+function tool(type) {
+  if (type === "0") {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let m = document.getElementById("m").value;
+    document.getElementById("result").value = bigInt(a).modPow(b, m).toString();
+  } else {
+    let a = document.getElementById("a1").value;
+    let m = document.getElementById("m1").value;
+    document.getElementById("result1").value = bigInt(a).modInv(m).toString();
+  }
+}
 function multiplyPoint() {
   let xp = document.getElementById("xp").value;
   let yp = document.getElementById("yp").value;
@@ -882,8 +894,8 @@ function multiplyPoint() {
   }
   let generate = P.generate();
   let result = generate[(n % generate.length) - 1];
-  document.getElementById("xresult").value = result.x;
-  document.getElementById("yresult").value = result.y;
+  document.getElementById("xresult").value = n !== 0 ? result.x : 0;
+  document.getElementById("yresult").value = n !== 0 ? result.y : 0;
 }
 function getPoints() {
   if (
